@@ -28,7 +28,7 @@
             <a href="{{ url_for('home') }}" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Add new item</a>
+            <a href="{{ url_for('new_item') }}" class="nav-link {{ 'active' if active_page == 'new_item' else '' }}">Add new item</a>
           </li>
         </ul>
       </div>
