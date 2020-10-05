@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-7 offset-lg-2 my-5">
             <h1>Add new item</h1><hr>
-            <form class="form-group" method="post" action="{{ url_for('new_item') }}">
+            <form class="form-group" method="post" action="{{ url_for('new_item') }}" enctype="multipart/form-data">
                 {{ form.hidden_tag() }}
                 {{ form.title.label }}
                 {{ form.title(class="form-control") }}
@@ -22,6 +22,9 @@
 
                 {{ form.subcategory.label }}
                 {{ form.subcategory(class="form-control") }}
+                <br>
+                {{  form.image.label }} <br>
+                {{  form.image }}
                 <hr>
                 {{ form.submit(class="btn btn-primary form-control") }}
             </form>
