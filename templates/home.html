@@ -5,7 +5,21 @@
   <div class="row">
     <div class="col-lg-3">
       <div class="my-4">
-        <h1>Filters</h1>
+          <form class="form-group" action="{{  url_for('home') }}" method="GET">
+              {{ form.title.label }}
+              {{ form.title(class="form-control") }}
+
+              {{ form.price.label }}
+              {{ form.price(class="form-control") }}
+
+              {{ form.category.label }}
+              {{ form.category(class="form-control") }}
+
+              {{ form.subcategory.label }}
+              {{ form.subcategory(class="form-control") }}
+              <hr>
+              {{ form.submit(class="btn btn-primary form-control") }}
+          </form>
       </div>
     </div>
     <div class="col-lg-9">
